@@ -1,0 +1,67 @@
+.user-directory-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.heading {
+    text-align: center;
+}
+
+.list {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    background-color: #EBE3D5;
+
+}
+
+li:hover {
+    background-color: #B0A695;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+a {
+    text-decoration: none
+}
+
+Link {
+    display: block;
+    color: #333;
+}
+
+Link:hover {
+    background-color: #f0f0f0;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.p-10 {
+    padding: 10px;
+}
