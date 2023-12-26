@@ -17,7 +17,7 @@ const UserPosts = ({ userId }) => {
     <div className="post-cards-container">
       <div className="post-cards">
         {posts.map((post) => (
-          <div key={post.id} className="post-card">
+          <div key={post.id} className="each-post-card">
             <h4>{post.title}</h4>
             <p>{post.body}</p>
           </div>

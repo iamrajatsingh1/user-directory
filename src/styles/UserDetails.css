@@ -1,13 +1,27 @@
-.user-details-container {
-  padding: 20px;
+.user-details-outer-container {
   max-width: 800px;
   margin: 0 auto;
+  padding: 20px;
   text-align: center;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-.user-basic-details {
-  border: 1px solid #ccc;
-  border-radius: 5px;
+.user-details-inner-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.user-details-inner-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .user-details-inner-container {
+    flex-direction: column;
+  }
 }

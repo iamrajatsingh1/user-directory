@@ -1,18 +1,19 @@
-import React from 'react'
+import React from 'react';
+import "../styles/BasicDetails.css"
 
 const BasicDetails = ({ user }) => {
   return (
-    <div className="user-basic-details p-10">
-      <div className="d-flex justify-between p-10">
-        <span>Name: {user?.name}</span>
+    <div className="user-basic-details">
+      <div className="flex-container">
+        <span><strong>Name:</strong> {user?.name}</span>
         <span>
-          Address: {user?.address?.street} {user?.address?.suite}{' '}
+          <strong>Address:</strong> {user?.address?.street} {user?.address?.suite}{' '}
           {user?.address?.city}
         </span>
       </div>
-      <div className="d-flex justify-between p-10">
-        <span>Username: {user?.username}</span>
-        <span>Email: {user?.email}</span>
+      <div className="flex-container">
+        <span><strong>Username:</strong> {user?.username}</span>
+        <span><strong>Email:</strong> {user?.email}</span>
       </div>
     </div>
   )

@@ -17,8 +17,8 @@ const UserDetail = () => {
 
   return (
     <div className="p-10">
-      <div className="user-details-container">
-        <div className="d-flex flex-row justify-between align-items-center">
+      <div className="user-details-outer-container">
+        <div className="user-details-inner-container">
           <div>
             <button className="btn" onClick={handleGoBack}>
               Back
