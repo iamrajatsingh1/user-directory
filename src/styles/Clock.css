@@ -1,14 +1,14 @@
 .clock-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 }
 
 .clock-display {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #0f2027;
-    color: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #0f2027;
+  color: white;
 }
