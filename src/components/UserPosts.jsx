@@ -28,4 +28,4 @@ const UserPosts = ({ userId }) => {
     );
 };
 
-export default UserPosts;
+export default React.memo(UserPosts);
