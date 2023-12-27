@@ -1,27 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react'
 import '../styles/Clock.css'
 import axios from 'axios'
+import useFetchCountries from '../hooks/useFetchCountries'
 
 const Clock = () => {
   const [time, setTime] = useState(new Date())
   const [isPaused, setIsPaused] = useState(false)
-  const [countries, setCountries] = useState([])
+  const { countries } = useFetchCountries();
+
   const [selectedCountry, setSelectedCountry] = useState('Asia/Kolkata')
 
   const intervalRef = useRef(null)
   const pausedTime = useRef(null)
-
-  // Fetch the list of countries on Component Mount
-  useEffect(() => {
-    axios
-      .get('http://worldtimeapi.org/api/timezone')
-      .then((response) => {
-        setCountries(response.data)
-      })
-      .catch((error) => {
-        console.error('Error fetching countries:', error)
-      })
-  }, [])
 
   useEffect(() => {
     const tick = () => {

@@ -1,22 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import '../styles/UserPosts.css'
-import axios from 'axios'
+import useFetchUserPosts from '../hooks/useFetchUserPosts';
 
 const UserPosts = ({ userId }) => {
-  const [posts, setPosts] = useState([])
+  const { posts, loading, error } = useFetchUserPosts(userId);
 
-  useEffect(() => {
-    axios
-      .get(`https://jsonplaceholder.typicode.com/posts?userId=${userId}`)
-      .then((response) => {
-        setPosts(response.data)
-      })
-  }, [userId])
 
   return (
     <div className="post-cards-container">
       <div className="post-cards">
-        {posts.map((post) => (
+        {loading && <p>Loading posts...</p>}
+        {error && <p>Error fetching posts: {error.message}</p>}
+        {!loading && posts.map((post) => (
           <div key={post.id} className="each-post-card">
             <h4>{post.title}</h4>
             <p>{post.body}</p>
